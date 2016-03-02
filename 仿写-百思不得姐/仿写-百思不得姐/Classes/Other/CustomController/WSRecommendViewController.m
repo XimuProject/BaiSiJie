@@ -46,6 +46,8 @@ static NSString  *const WSUserId = @"user";
     [self steupTableView];
     
     
+    
+    
     // 显示指示器
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     
