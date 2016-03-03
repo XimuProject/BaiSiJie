@@ -25,29 +25,53 @@ static NSString *const WSTagsId = @"tag";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupTableview];
-    [self laodTags];
+    [self setupTableView];
+    [self loadTags];
 
 }
 
--(void)setupTableview
+- (void)loadTags
 {
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     
+    // 请求参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"tag_recommend";
+    params[@"action"] = @"sub";
+    params[@"c"] = @"topic";
+    
+    // 发送请求
+    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        self.tags = [WSRecommandTagModel mj_objectArrayWithKeyValuesArray:responseObject];
+        [self.tableView reloadData];
+        
+        [SVProgressHUD dismiss];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [SVProgressHUD showErrorWithStatus:@"加载标签数据失败!"];
+    }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupTableView
+{
+    self.title = @"推荐标签";
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([WSRecommandTagsCell class]) bundle:nil] forCellReuseIdentifier:WSTagsId];
+    self.tableView.rowHeight = 70;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = WSGlobalBackgroundColor;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Table view data source
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.tags.count;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    WSRecommandTagsCell *cell = [tableView dequeueReusableCellWithIdentifier:WSTagsId];
+    
+    cell.recommendTag = self.tags[indexPath.row];
+    
+    return cell;
+}
+
 
 @end
