@@ -16,6 +16,16 @@
 /** 名字 */
 @property (nonatomic, copy) NSString *name;
 
-//这个类别对应的用户
+
+//类别对应的用户数据的总数（服务器返回的数据里面）
+@property (nonatomic ,assign)NSInteger total;
+
+//当前页码
+@property (nonatomic ,assign)NSInteger currentPage;
+
+//存储这个类别对应的用户总数
 @property(nonatomic,strong)NSMutableArray *users;
+
 @end
+
+

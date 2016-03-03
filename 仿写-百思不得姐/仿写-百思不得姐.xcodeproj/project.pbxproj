@@ -29,6 +29,10 @@
 		0D31E28E1C840C4600B48DCC /* WSRecommendUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D31E28D1C840C4600B48DCC /* WSRecommendUserModel.m */; };
 		0D31E2921C840CCC00B48DCC /* WSRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D31E2901C840CCC00B48DCC /* WSRecommendUserCell.m */; };
 		0D31E2931C840CCC00B48DCC /* WSRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D31E2911C840CCC00B48DCC /* WSRecommendUserCell.xib */; };
+		0D31E2961C882B8300B48DCC /* WSRecommandTagsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D31E2951C882B8300B48DCC /* WSRecommandTagsController.m */; };
+		0D31E2991C882C9500B48DCC /* WSRecommandTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D31E2981C882C9500B48DCC /* WSRecommandTagModel.m */; };
+		0D31E29D1C882CD600B48DCC /* WSRecommandTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D31E29B1C882CD600B48DCC /* WSRecommandTagsCell.m */; };
+		0D31E29E1C882CD600B48DCC /* WSRecommandTagsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D31E29C1C882CD600B48DCC /* WSRecommandTagsCell.xib */; };
 		6837538E4600A8C30894B146 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1F93C20DB54465FFA76DFB /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +76,13 @@
 		0D31E28F1C840CCC00B48DCC /* WSRecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSRecommendUserCell.h; sourceTree = "<group>"; };
 		0D31E2901C840CCC00B48DCC /* WSRecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSRecommendUserCell.m; sourceTree = "<group>"; };
 		0D31E2911C840CCC00B48DCC /* WSRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSRecommendUserCell.xib; sourceTree = "<group>"; };
+		0D31E2941C882B8300B48DCC /* WSRecommandTagsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSRecommandTagsController.h; path = ../../../../WSRecommandTagsController.h; sourceTree = "<group>"; };
+		0D31E2951C882B8300B48DCC /* WSRecommandTagsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSRecommandTagsController.m; path = ../../../../WSRecommandTagsController.m; sourceTree = "<group>"; };
+		0D31E2971C882C9500B48DCC /* WSRecommandTagModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSRecommandTagModel.h; sourceTree = "<group>"; };
+		0D31E2981C882C9500B48DCC /* WSRecommandTagModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSRecommandTagModel.m; sourceTree = "<group>"; };
+		0D31E29A1C882CD600B48DCC /* WSRecommandTagsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSRecommandTagsCell.h; sourceTree = "<group>"; };
+		0D31E29B1C882CD600B48DCC /* WSRecommandTagsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSRecommandTagsCell.m; sourceTree = "<group>"; };
+		0D31E29C1C882CD600B48DCC /* WSRecommandTagsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSRecommandTagsCell.xib; sourceTree = "<group>"; };
 		240031D6B5F9A51C0EF1C485 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9F1A0354942CBCD9FF84A133 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EC1F93C20DB54465FFA76DFB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +145,8 @@
 		0D31E23A1C82D76F00B48DCC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0D31E2941C882B8300B48DCC /* WSRecommandTagsController.h */,
+				0D31E2951C882B8300B48DCC /* WSRecommandTagsController.m */,
 				0D31E23B1C82D76F00B48DCC /* WSEssenceViewController.h */,
 				0D31E23C1C82D76F00B48DCC /* WSEssenceViewController.m */,
 			);
@@ -143,6 +156,8 @@
 		0D31E23D1C82D76F00B48DCC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0D31E2971C882C9500B48DCC /* WSRecommandTagModel.h */,
+				0D31E2981C882C9500B48DCC /* WSRecommandTagModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,6 +165,9 @@
 		0D31E23E1C82D76F00B48DCC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0D31E29A1C882CD600B48DCC /* WSRecommandTagsCell.h */,
+				0D31E29B1C882CD600B48DCC /* WSRecommandTagsCell.m */,
+				0D31E29C1C882CD600B48DCC /* WSRecommandTagsCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -409,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D31E2881C83029900B48DCC /* WSRecommendCategoryCell.xib in Resources */,
+				0D31E29E1C882CD600B48DCC /* WSRecommandTagsCell.xib in Resources */,
 				0D31E2751C82D77000B48DCC /* Info.plist in Resources */,
 				0D31E2831C83000700B48DCC /* WSRecommendViewController.xib in Resources */,
 				0D31E2931C840CCC00B48DCC /* WSRecommendUserCell.xib in Resources */,
@@ -477,6 +496,7 @@
 				0D31E28B1C8302D100B48DCC /* WSRecommendCategoryModel.m in Sources */,
 				0D31E2921C840CCC00B48DCC /* WSRecommendUserCell.m in Sources */,
 				0D31E26A1C82D77000B48DCC /* WSFriendTrendViewController.m in Sources */,
+				0D31E29D1C882CD600B48DCC /* WSRecommandTagsCell.m in Sources */,
 				0D31E2721C82D77000B48DCC /* WSTabBarController.m in Sources */,
 				0D31E2711C82D77000B48DCC /* UIView+WSExtension.m in Sources */,
 				0D31E2791C82D9D300B48DCC /* WSNavigationController.m in Sources */,
@@ -485,9 +505,11 @@
 				0D31E28E1C840C4600B48DCC /* WSRecommendUserModel.m in Sources */,
 				0D31E2691C82D77000B48DCC /* WSEssenceViewController.m in Sources */,
 				0D31E2731C82D77000B48DCC /* WSTabBar.m in Sources */,
+				0D31E2991C882C9500B48DCC /* WSRecommandTagModel.m in Sources */,
 				0D31E2811C82FFB000B48DCC /* WSRecommendViewController.m in Sources */,
 				0D31E26C1C82D77000B48DCC /* WSNewViewController.m in Sources */,
 				0D31E26D1C82D77000B48DCC /* AppDelegate.m in Sources */,
+				0D31E2961C882B8300B48DCC /* WSRecommandTagsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

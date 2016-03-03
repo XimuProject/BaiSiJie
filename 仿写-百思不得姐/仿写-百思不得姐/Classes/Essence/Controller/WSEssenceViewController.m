@@ -7,6 +7,7 @@
 //
 
 #import "WSEssenceViewController.h"
+#import "WSRecommandTagsController.h"
 
 @interface WSEssenceViewController ()
 
@@ -29,7 +30,7 @@
 
 - (void)tagClick
 {
-    WSLogFunc;
+    [self.navigationController pushViewController:[WSRecommandTagsController new] animated:YES];
 }
 
 
